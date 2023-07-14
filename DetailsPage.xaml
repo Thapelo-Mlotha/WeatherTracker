@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherTracker.DetailsPage"
+             Title="DetailsPage">
+
+    <Grid Padding="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+        <Label x:Name="lblWDayDetlsName"
+               Grid.Row="0"
+               Text="TUESDAY"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               FontSize="30"
+               TextColor="Gray"/>
+        <Image x:Name="imgWDayDetls"
+               Source="sun.png"
+               HeightRequest="100"
+               WidthRequest="100"/>
+        <Grid RowDefinitions="Auto"
+              Grid.Row="1"
+              ColumnDefinitions="0.25*,0.25*,0.25*,0.25*,">
+            <Image Source="up_arrow.png"
+                       Grid.Column="0"
+                       HeightRequest="20" 
+                       WidthRequest="20"/>
+            <Label x:Name="lblMaxTempDay"
+                       Grid.Column="1"
+                       Text="12°"
+                       FontSize="30"
+                       TextColor="Gray"/>
+            <Image Source="down_arrow.png"
+                       Grid.Column="2"
+                       HeightRequest="20" 
+                       WidthRequest="20"/>
+            <Label x:Name="lblMinTempDay"
+                   Grid.Column="3"
+                   Text="1°"
+                   FontSize="30"
+                   TextColor="Gray"/>
+        </Grid>
+        <Label x:Name="lblchnceRain"
+               Grid.Row="3"
+               Text="Chance of Rain: 8%"
+               FontSize="30"
+               TextColor="Gray"/>
+        <Label x:Name="lblchnceSnow"
+               Grid.Row="4"
+               Text="Chance of Snow: 0%"
+               FontSize="30"
+               TextColor="Gray"/>
+        <Label x:Name="lblhumidity"
+               Grid.Row="5"
+               Text="Humidity: 53%"
+               FontSize="30"
+               TextColor="Gray"/>
+        <Label x:Name="lblchnceSnow"
+               Grid.Row="6"
+               Text="Wind Speed: 5 km/h"
+               FontSize="30"
+               TextColor="Gray"/>
+        <Button Text="Go Back"
+                Clicked="Button_Clicked" />
+    </Grid>
+    
+</ContentPage>
